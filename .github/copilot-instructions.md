@@ -3,13 +3,29 @@ applyTo: "**"
 ---
 # Project general coding standards
 
+## Agent Mode Behavior
+
+- ALWAYS ask for confirmation before making any file edits or changes
+- When user asks for information (names, suggestions, examples), provide the answer WITHOUT making any file modifications
+- Only use file editing tools when explicitly requested by the user
+- Confirm the specific action before proceeding with any edit
+
 ## Naming Conventions
+
 - Use PascalCase for component names, interfaces, and type aliases
 - Use camelCase for variables, functions, and methods
 - Prefix private class members with underscore (_)
 - Use ALL_CAPS for constants
+- All file names, class names, method names, and any type names must be in English, although comments can be in Spanish
+
+## Directory Structure
+
+- Use kebab-case for directory names
+- Directory names must be in English
+- Keep directory names short and descriptive
 
 ## Error Handling
+
 - Use try/catch blocks for async operations
 - Implement proper error boundaries in React components
 - Always log errors with contextual information
@@ -29,6 +45,7 @@ All commit messages must follow the [Conventional Commits](https://www.conventio
 ```
 
 **Types:**
+
 - feat: A new feature
 - fix: A bug fix
 - docs: Documentation only changes
@@ -52,6 +69,8 @@ docs: update README with setup instructions
 ```
 
 **Rules:**
+
+- Each commit must represent a single atomic change (e.g., only one feat, fix, chore, etc.).
 - Use the imperative mood in the description ("add" not "added" or "adds").
 - Limit the subject line to 72 characters.
 - Separate subject from body with a blank line.

@@ -1,13 +1,10 @@
-
-# Web3 - 101 - Playground
+# Web3 - 101 - DApp - Playground
 
 ## Contexto
 
-Este repositorio forma parte de [Open3DIY.org](https://github.com/open3diy/org/blob/main/README.md) y está relacionado con [web3 - 101](https://github.com/open3diy/web3-101/blob/main/README.md).
+Este repositorio forma parte de [Open3DIY.org](https://github.com/open3diy/org/blob/main/README.md) y extiende a [web3 - 101](https://github.com/open3diy/web3-101/blob/main/README.md), para realizar pruebas con aplicaciones descentralizadas (Dapps) y contratos inteligentes.
 
-> Este repositorio es una extensión de los anteriores y está orientado a realizar pruebas con aplicaciones descentralizadas (Dapps) y contratos inteligentes.
-
-El contenido tiene un enfoque educativo y de pruebas de concepto, sirviendo para explorar el potencial de la Web3 y sus aplicaciones descentralizadas.
+El contenido tiene un enfoque educativo y de pruebas de concepto, sirviendo para explorar el potencial de Web3 y sus arquitectura de aplicaciones descentralizadas.
 
 **¡Aquí experimentamos con los componentes y aplicaciones de la Web3!**
 
@@ -21,61 +18,24 @@ Las aplicaciones de Web3 incluyen identidades digitales, economías descentraliz
 
 ## Solución
 
-La solución adoptada es la formación continua y la práctica. Cualquier formación, documento o explicación será probada y experimentada aquí previamente.
+Este repositorio está orientado a un entorno siempre `EVM compatible`.
+
+La solución adoptada se basa en la formación continua y la práctica constante. Toda formación, documentación o explicación será previamente probada y experimentada aquí. En el directorio `docs` se documentará ese aprendizaje en las secciones de `learning-paths` o `tutorials`, donde se resumen y aplican dichas formaciones.
+
+Se utilizarán diferentes stacks tecnológicos según el caso de uso.
 
 ### Asistente y Vibe Coding
 
 Este repositorio se desarrolla en VS Code y Copilot, utilizando [custom instructions](https://code.visualstudio.com/docs/copilot/customization/custom-instructions).
 
+## Contribuir
+
+Acceder a [cómo contribuir](CONTRIBUTING.md).
+
 ## Licencia
 
-La licencia es MIT. Consulta el archivo LICENSE para más detalles.
+La licencia es [MIT](https://mit-license.org/). Consulta el archivo LICENSE para más detalles.
 
 ## Referencias
 
 Las referencias están disponibles en [la comunidad](https://github.com/open3diy/web3-101/blob/main/COMMUNITY.md).
-
-## Contribuir
-
-### Preparar el entorno local
-
-Es necesario instalar previamente:
-
-- Python y entornos virtuales de Python:
-
-  ```bash
-  sudo apt install python3 python3-dev python3-venv
-  ```
-
-- nvm: <https://github.com/nvm-sh/nvm>
-
-**Entorno virtual de Python**.
-
-Se recomienda crear un entorno virtual de Python específico para el repositorio, siguiendo estos pasos:
-
-```bash
-python3 -m venv .venv-web3-101-playground
-```
-
-Al abrir VS Code normalmente se activa el entorno virtual automáticamente, pero si no es así, puedes activarlo manualmente en la terminal:
-
-```bash
-source .venv-web3-101-playground/bin/activate
-```
-
-Instala los paquetes necesarios:
-
-```bash
-pip install
-```
-
-Instala la extensión de VS Code `Jupyter`.
-
-### Iniciar VS Code
-
-Desde la carpeta del proyecto, abre la terminal y ejecuta:
-
-```bash
-nvm use
-code .
-```
