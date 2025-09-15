@@ -4,13 +4,28 @@
 
 ## backend-blockchain-smart-contrats
 
-### Instalación local de OpenZeppelin Contracts
+### Configuración inicial de Foundry
 
-Para utilizar OpenZeppelin Contracts en un proyecto basado en Foundry, primero instala la dependencia ejecutando en la raíz del proyecto:
+Antes de instalar dependencias, crea el archivo de configuración de Foundry:
 
 ```bash
+# Ir al directorio de contratos
+cd contracts
+# Crear archivo foundry.toml con configuración básica
+```
+
+Asegúrate de tener un archivo `foundry.toml` en el directorio `contracts/` con la configuración básica del proyecto (directorios, versión de Solidity, remappings, etc.).
+
+### Instalación local de OpenZeppelin Contracts
+
+Para utilizar OpenZeppelin Contracts en un proyecto basado en Foundry, instala la dependencia ejecutando desde el directorio de contratos:
+
+```bash
+# Desde contracts/, instalar la librería
 forge install OpenZeppelin/openzeppelin-contracts
 ```
+
+**Nota**: Este comando creará la carpeta `lib/` en la raíz del workspace (no dentro de `contracts/`). Esto es el comportamiento normal de Foundry, que maneja las dependencias como submódulos de Git a nivel de repositorio.
 
 ### [Descartado inicialmente] Linting: Instalación extensión Solidity en vscode
 

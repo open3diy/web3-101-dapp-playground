@@ -181,5 +181,5 @@
         "webui",
         "Wikipidea"
     ],
-    "cSpell.ignorePaths": ["**/*.py", "**/*.ipynb"]
+    "cSpell.ignorePaths": ["**/*.py", "**/*.ipynb","**/.gitignore"]
 }

@@ -1,0 +1,75 @@
+# ============================================================================
+# FOUNDRY CONFIGURATION FOR WEB3-101-DAPP-PLAYGROUND
+# ============================================================================
+# Este archivo configura Foundry para un proyecto playground de aprendizaje
+# donde experimentarás con smart contracts, tests y despliegues
+
+[profile.default]
+# ESTRUCTURA DE DIRECTORIOS
+# ------------------------
+src = "src"                    # Aquí van tus smart contracts (.sol)
+out = "out"                    # Foundry compila los contratos aquí (artifacts)
+libs = ["lib"]                 # Dependencias externas (OpenZeppelin, etc.)
+test = "test"                  # Tests unitarios de tus contratos
+script = "scripts"             # Scripts de despliegue y automatización
+cache_path = "cache"           # Cache de compilación (acelera builds)
+broadcast = "broadcast"        # Logs de transacciones reales en redes
+
+# COMPILADOR SOLIDITY
+# ------------------
+solc = "0.8.30"               # Versión más reciente (mayo 2025) - incluye soporte para Prague EVM
+optimizer = true              # Optimiza gas - importante para costos reales
+optimizer_runs = 200          # Balance entre tamaño y costo de gas (ideal para playground)
+via_ir = false                # Compilación IR - más lenta, solo si necesitas
+
+# PERFIL DE PRODUCCIÓN
+# --------------------
+# Usar con: forge build --profile production
+[profile.production]
+solc = "0.8.30"               # Misma versión para consistencia
+optimizer = true              # Optimización máxima para mainnet
+optimizer_runs = 10000        # Alto número de ejecuciones esperadas (contratos populares)
+via_ir = true                 # Pipeline IR para optimización avanzada
+bytecode_hash = "none"        # Evita metadata hash para deploy determinista
+
+# REMAPPINGS - ALIASES PARA IMPORTS
+# ---------------------------------
+# Te permite usar imports limpios como: import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+# en lugar de: import "./lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
+remappings = [
+    "@openzeppelin/contracts/=./lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/=./lib/openzeppelin-contracts/",
+    "ds-test/=./lib/ds-test/src/",            # Framework de testing clásico
+    "forge-std/=./lib/forge-std/src/"         # Utilidades estándar de Foundry
+]
+
+# CONFIGURACIÓN DE REDES
+# ----------------------
+[rpc_endpoints]
+localhost = "http://127.0.0.1:8545"    # Anvil local node (para desarrollo)
+sepolia = "${SEPOLIA_RPC_URL}"          # Red de prueba (usa variables de entorno)
+mainnet = "${MAINNET_RPC_URL}"          # Red principal (¡cuidado con gas real!)
+
+# VERIFICACIÓN EN ETHERSCAN
+# -------------------------
+# Para hacer públicos y verificables tus contratos desplegados
+[etherscan]
+sepolia = { key = "${ETHERSCAN_API_KEY}" }  # Verifica en testnet
+mainnet = { key = "${ETHERSCAN_API_KEY}" }  # Verifica en mainnet
+
+# ANÁLISIS ESTÁTICO (OPCIONAL)
+# ----------------------------
+# Model checker busca bugs y vulnerabilidades automáticamente
+[profile.default.model_checker]
+contracts = {"/src" = ["all"]}    # Analiza todos los contratos
+engine = "chc"                    # Motor CHC (Constrained Horn Clauses)
+timeout = 10000                   # 10 segundos máximo por análisis
+
+# FORMATO DE CÓDIGO
+# ----------------
+# Mantiene tu código consistente y legible
+[fmt]
+line_length = 120                 # Líneas más largas para pantallas modernas
+tab_width = 4                     # Espaciado estándar
+bracket_spacing = true            # Espacios en { } para mejor legibilidad
+int_types = "long"               # uint256 en lugar de uint para claridad
