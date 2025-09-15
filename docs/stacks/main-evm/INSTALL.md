@@ -16,12 +16,27 @@ cd contracts
 
 Asegúrate de tener un archivo `foundry.toml` en el directorio `contracts/` con la configuración básica del proyecto (directorios, versión de Solidity, remappings, etc.).
 
+### Iniciar package.json
+
+Para gestionar dependencias (como solhint), necesitas inicializar un archivo `package.json` en el directorio de `contracts`.
+
+El archivo ya está creado, asi que **esto no debes hacerlo**, a modo de ejemplo, te digo como se crearía inicialmente este archivo `package.json`:
+
+```bash
+# Ir al directorio de contratos si no estás ya
+cd contracts
+# Inicializar package.json con configuración por defecto
+pnpm init
+```
+
+Esto creará un archivo `package.json` básico en `contracts/`, permitiendo instalar y gestionar dependencias como solhint, scripts personalizados, y otras herramientas relacionadas con el desarrollo de smart contracts.
+
 ### Instalación local de OpenZeppelin Contracts
 
 Para utilizar OpenZeppelin Contracts en un proyecto basado en Foundry, instala la dependencia ejecutando desde el directorio de contratos:
 
 ```bash
-# Desde contracts/, instalar la librería
+# Situarse en el directorio contracts/, instalar librerías openzeppelin
 forge install OpenZeppelin/openzeppelin-contracts
 ```
 
@@ -34,10 +49,11 @@ La extensión de vscode [Solidity](https://marketplace.visualstudio.com/items?it
 Debes tener instalado por lo tanto solhint:
 
 ```bash
-npm install --save-dev solhint
+# Situarse en el directorio contracts/, instalar solhint
+pnpm add -D solhint
 ```
 
-Puedes configurar las reglas de Solhint creando un archivo `.solhint.json` en la raíz del proyecto.
+Puedes configurar las reglas de Solhint creando un archivo `.solhint.json` en la directorio `contracts` del proyecto.
 
 Reinicia VS Code para que la extensión detecte Solhint y muestre advertencias y errores directamente en el editor.
 
@@ -48,7 +64,8 @@ Instalar la extensión: <https://marketplace.visualstudio.com/items?itemName=Nom
 Sin embargo, para no perder las comprobaciones de solhint, se recomienda instalarlo y ejecutarlo como tarea manual o integrada en el flujo de trabajo:
 
 ```bash
-npm install --save-dev solhint
+# Situarse en el directorio contracts/, instalar solhint
+pnpm add -D solhint
 ```
 
 Puedes ejecutar solhint sobre tus contratos con:
@@ -66,29 +83,15 @@ Asegúrate de tener Python 3 instalado.
 Instalar:
 
 ```bash
+# Se asume que estás situado en el directorio contracts/ para activar el entorno virtual de python
+source ../.venv/bin/activate
 pip install slither-analyzer
 ```
 
-Para analizar un proyecto, navega a la raíz y ejecuta:
+Para analizar un proyecto, navega a directorio `contracts` y ejecuta:
 
 ```bash
 slither .
-```
-
-### Análisis estático de código: Mythril
-
-Mythril, herramienta de análisis para encontrar vulnerabilidades profundas.
-
-Instalación de Mythril:
-
-```bash
-pip install mythril
-```
-
-Para analizar un contrato:
-
-```bash
-myth analyze ruta/al/contrato.sol
 ```
 
 ### Entorno de pruebas: Servidor desarrollo local Anvil (Foundry)

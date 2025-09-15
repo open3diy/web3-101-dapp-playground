@@ -98,7 +98,7 @@ Si tienes diferentes versiones de node js, normalmente necesitas ejecutar en ter
 
 - Instalar la extension vscode nvm integration (recomendado).
 
-Instalar pnpm como gestor de paquetes:
+Instalar pnpm como gestor de paquetes e iniciar:
 
 ```bash
 curl -fsSL https://get.pnpm.io/install.sh | sh -

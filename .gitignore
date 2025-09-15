@@ -100,3 +100,49 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Node.js dependencies
+**/node_modules/
+
+# npm logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# dotenv environment files
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Build output
+**/dist/
+**/build/
+**/out/
+
+
+# Parcel build output
+**/.cache/
+**/.parcel-cache/
+
+# Svelte build output
+**/.svelte-kit/
+
+# TypeScript cache
+**/*.tsbuildinfo
+
+# Mac system files
+**/.DS_Store
+
+# Windows system files
+**/Thumbs.db
+
+# Coverage reports
+**/coverage/
+
+# Foundry
+**/cache/
+**/out/
+**/broadcast/
+**/.env

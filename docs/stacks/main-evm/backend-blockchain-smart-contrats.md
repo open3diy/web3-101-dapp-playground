@@ -39,7 +39,7 @@ Slither: analizador estático avanzado desarrollado por Trail of Bits. Detecta v
 
 **Herramientas adicionales (opcional según el proyecto)**.
 
-Mythril: herramienta de análisis simbólico que inspecciona el bytecode para encontrar vulnerabilidades profundas que pueden pasar desapercibidas con análisis estático tradicional. Recomendado para auditorías avanzadas o fases previas a producción.
+Echidna: framework de fuzzing para contratos inteligentes en Solidity, desarrollado por Trail of Bits. Permite definir propiedades (invariantes) que deben cumplirse durante la ejecución del contrato y genera automáticamente entradas aleatorias para intentar romper esas propiedades. Es especialmente útil para descubrir errores lógicos, vulnerabilidades y comportamientos inesperados que no se detectan con pruebas convencionales. Se integra fácilmente con Foundry y es recomendado para fortalecer la seguridad y robustez de los contratos antes de su despliegue.
 
 Securify: analizador online de seguridad creado por ETH Zurich. Permite análisis rápido y detección de patrones de vulnerabilidad conocidos, pero está menos actualizado que otras opciones.
 
