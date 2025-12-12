@@ -1,0 +1,18 @@
+# Jupyter and kernel dependencies
+notebook
+ipykernel
+ipympl
+
+# Graph visualization libraries
+graphviz
+networkx
+matplotlib
+pydot
+pygraphviz
+pyvis
+
+# Additional visualization
+bokeh
+
+# Crypto utilities
+base58

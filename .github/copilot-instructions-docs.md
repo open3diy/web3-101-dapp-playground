@@ -13,21 +13,33 @@ applyTo: "docs/**/*.md"
 
 ## Formatting Standards
 
-- Avoid using bold formatting (**text**) to maintain clean and minimal documentation style
-- Use proper heading hierarchy (# ## ### ####)
-- Use code blocks with specific language identifiers when applicable:
+- Avoid using bold formatting (**text**) to maintain a clean and minimal documentation style
+- Headings must use the proper hierarchy (#, ##, ###, ####) and always be followed by a blank line
+- After any introductory text, if there is a list, insert a blank line before the dashes:
 
-  ```bash
-  # For terminal commands
-  ```
+Example:
 
-  ```solidity
-  // For smart contract code
-  ```
+Introductory text.
 
-  ```json
-  // For configuration files
-  ```
+- First item
+- Second item
+
+- Do not use tabs anywhere, neither in lists nor in code blocks
+- Code blocks must not be indented and should use the appropriate language identifier, never tabbed:
+
+```bash
+# Terminal command
+```
+
+```solidity
+// Smart contract code
+```
+
+```json
+// Configuration file
+```
+
+- Follow markdownlint rules: headings without spaces before/after, lists with dashes, code blocks surrounded by blank lines, no tabs
 
 ## Structure Guidelines
 

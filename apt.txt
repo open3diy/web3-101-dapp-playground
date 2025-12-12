@@ -1,0 +1,12 @@
+# Graphviz and development dependencies for PyGraphviz
+graphviz
+libgraphviz-dev
+pkg-config
+
+# Build essentials for compiling Python packages
+build-essential
+python3-dev
+
+# Node.js for executing JavaScript/Node.js scripts in Jupyter notebooks
+nodejs
+npm

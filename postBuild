@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Enable Jupyter extensions
+jupyter nbextension enable --py widgetsnbextension --sys-prefix
+
+# Install ipympl for matplotlib interactive support
+jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib
+
+echo "Binder environment configured successfully!"

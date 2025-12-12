@@ -1,5 +1,9 @@
 # Capa FrontEnd de la DApp
 
+//Todo:- [RainbowKit](https://www.rainbowkit.com/): Es una librería que facilita la integración de wallets en aplicaciones Web3. Ofrece una experiencia de usuario fluida y personalizable, permitiendo a los desarrolladores conectar múltiples wallets de manera sencilla y segura.
+- [viem](https://viem.sh/): Es una librería moderna para interactuar con Ethereum y otras blockchains compatibles con EVM. Ofrece una API sencilla y eficiente para realizar llamadas a contratos, gestionar cuentas y manejar eventos, optimizando el desarrollo de aplicaciones descentralizadas.
+- [Wagmi](https://wagmi.sh/): Es una colección de hooks de React para interactuar con Ethereum. Simplifica la conexión de wallets, la lectura y escritura de contratos, y la gestión del estado de las dApps. Es ideal para desarrolladores que buscan construir interfaces de usuario modernas y eficientes en Web3.
+
 ## Arquitectura y responsabilidades
 
 La capa frontend constituye la interfaz de usuario de la aplicación descentralizada, implementando una arquitectura client-side que se conecta a la blockchain a través de la capa de integración.
