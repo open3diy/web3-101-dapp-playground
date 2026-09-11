@@ -1,4 +1,4 @@
-# El estándar de los smart contracts
+# Los protocolos de los smart contracts
 
 En un entorno EVM, los estándares de smart contracts son, por definición, uno de los pilares más importantes de la Web3. Como analogía, el smart contract es la ley; o, si eres religioso, los evangelios que todos deben seguir.
 
